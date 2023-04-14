@@ -1,12 +1,15 @@
 import logo from "./logo.svg";
 import "./App.css";
 import HeadTemplate from "./components";
+import List from "./components/list/index";
 
 function App() {
+    let toDoList = ["clothes", "dishes", "cook"];
+
     return (
         <div className="App">
             <header className="App-header">
-                <HeadTemplate />
+                <List toDo={"shop"} />
                 <img src={logo} className="App-logo" alt="logo" />
                 <p>
                     Edit <code>src/App.js</code> and save to reload.
