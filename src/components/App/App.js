@@ -1,8 +1,7 @@
 import logo from "/Users/Dan/OneDrive/Documents/SchoolOfCode/coursework/react_recap/my-app/src/logo.svg";
 import "./App.css";
-import List from "../list/index";
-import Comment from "../comment";
-import StockStatistics from "../stock_statistics";
+import StockTrumpCard from "../stock_trump_card";
+import StockImage from "../stock_logo";
 
 function App() {
     const stocks = [
@@ -13,6 +12,8 @@ function App() {
             sharesOut: "250,000,000",
             revenue: "2bln",
             earnings: "200mln",
+            eps: "$2.23",
+            bio: "Apple Inc. (AAPL) is a multinational technology company headquartered in Cupertino, California. Founded in 1976, it has become a leading innovator in consumer electronics, software, and services, with iconic products such as the iPhone, iPad, and Mac, and a strong ecosystem of services including the App Store, Apple Music, and iCloud, making it one of the most valuable and influential companies in the world.",
         },
         {
             name: "Meta",
@@ -21,18 +22,13 @@ function App() {
             sharesOut: "120,000,000",
             revenue: "1.2bln",
             earnings: "100mln",
+            eps: "$1.45",
         },
     ];
 
     return (
         <div>
-            <StockStatistics
-                price="$100"
-                sharesOut="120,000,000"
-                revenue="$2 bln"
-                earnings="$200mln"
-                eps="$2.20"
-            />
+            <StockTrumpCard stocks={stocks} />
         </div>
     );
 
