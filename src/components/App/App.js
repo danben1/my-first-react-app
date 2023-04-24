@@ -47,17 +47,19 @@ function App() {
                 justifyContent="center"
                 mt="-100px"
             >
-                <StockTrumpCard stocks={stocks} />
+                <StockTrumpCard stocks={stocks} box />
             </HStack>
-            <Button
-                className="b"
-                colorScheme={"green"}
-                _hover={{ background: "blue" }}
-                fontSize={15}
-                margin={15}
-            >
-                Refresh Deck
-            </Button>
+            <HStack justifyContent="center" pt="20px">
+                <Button
+                    className="b"
+                    colorScheme={"green"}
+                    _hover={{ background: "gray" }}
+                    fontSize={15}
+                    margin={15}
+                >
+                    Refresh Deck
+                </Button>
+            </HStack>
         </Box>
     );
 }
