@@ -3,6 +3,7 @@ import "./App.css";
 import StockTrumpCard from "../stock_trump_card";
 import StockImage from "../stock_logo";
 import Header from "../heading";
+import StatCard from "../stock_info_card";
 import {
     Box,
     Flex,
@@ -12,6 +13,7 @@ import {
     Heading,
     Button,
     Center,
+    Input,
 } from "@chakra-ui/react";
 
 function App() {
@@ -40,7 +42,7 @@ function App() {
 
     return (
         <Box bg="whitesmoke">
-            <Header />
+            <Header title="Stock Trumps" subtitle="challenge the computer" />
             <HStack
                 spacing="120px"
                 alignItems="flex-start"
@@ -60,6 +62,17 @@ function App() {
                     Refresh Deck
                 </Button>
             </HStack>
+            <Header
+                title="pick your own trump"
+                subtitle="search for a trump of your choosing"
+            />
+            <HStack spacing={15} mt={-100} justifyContent="center">
+                <Input placeholder="pick a stock" bg="white" width={250} />
+                <Button bg="white">Enter</Button>
+            </HStack>
+            <Flex>
+                <StatCard />
+            </Flex>
         </Box>
     );
 }
