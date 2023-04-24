@@ -2,6 +2,17 @@ import logo from "/Users/Dan/OneDrive/Documents/SchoolOfCode/coursework/react_re
 import "./App.css";
 import StockTrumpCard from "../stock_trump_card";
 import StockImage from "../stock_logo";
+import Header from "../heading";
+import {
+    Box,
+    Flex,
+    Stack,
+    VStack,
+    HStack,
+    Heading,
+    Button,
+    Center,
+} from "@chakra-ui/react";
 
 function App() {
     const stocks = [
@@ -23,38 +34,32 @@ function App() {
             revenue: "1.2bln",
             earnings: "100mln",
             eps: "$1.45",
+            bio: "Meta originally founded as Facebook was setup by mark zuckeberg in 2003. It is a social media giant and also owns instagram",
         },
     ];
 
     return (
-        <div>
-            <StockTrumpCard stocks={stocks} />
-        </div>
+        <Box bg="whitesmoke">
+            <Header />
+            <HStack
+                spacing="120px"
+                alignItems="flex-start"
+                justifyContent="center"
+                mt="-100px"
+            >
+                <StockTrumpCard stocks={stocks} />
+            </HStack>
+            <Button
+                className="b"
+                colorScheme={"green"}
+                _hover={{ background: "blue" }}
+                fontSize={15}
+                margin={15}
+            >
+                Refresh Deck
+            </Button>
+        </Box>
     );
-
-    /*<div className="App">
-            <header className="App-header">
-                <List toDo={"shop"} />
-                <Comment
-                    initials="DB"
-                    author="Dan Bennett"
-                    content="Test React App"
-                />
-                <img src={logo} className="App-logo" alt="logo" />
-                <p>
-                    Edit <code>src/App.js</code> and save to reload.
-                </p>
-                <a
-                    className="App-link"
-                    href="https://reactjs.org"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                >
-                    Learn React
-                </a>
-    </header>
-            
-    </div>*/
 }
 
 export default App;
